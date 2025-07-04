@@ -12,6 +12,13 @@ description, content. Что ещё можно почитать:
 • Пример использования zeep
 
 Запуск тестов:
+
+config.yaml
+```yaml
+address: "https://test-stand.gb.ru/"
+username: "your_username"  # Замените на реальные данные
+password: "your_password"   # Замените на реальные данные
+
 ```
 pytest -v test_api.py
 ```
