@@ -1,14 +1,13 @@
 from BaseApp import BasePage
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import logging
 import yaml
 
 with open("./testdata.yaml") as f:
     testdata = yaml.safe_load(f)
-username = testdata.get("username")  # Переименовано для избежания конфликта
+name = testdata.get("username")
 
+#локаторам даем осознанные имена заглавными буквами по стандарту PO
 class TestSearchLocators:
     LOCATOR_LOGIN_FIELD = (By.XPATH, """//*[@id="login"]/div[1]/label/input""")
     LOCATOR_PASS_FIELD = (By.XPATH, """//*[@id="login"]/div[2]/label/input""")
@@ -21,11 +20,14 @@ class TestSearchLocators:
     LOCATOR_SAVE_BTN = (By.CSS_SELECTOR, """button[type="submit"]""")
     LOCATOR_SEARCH_TITLE_FIELD = (By.XPATH, """//*[@id='app']/main/div/div[1]/h1""")
     LOCATOR_HELLO = (By.XPATH, """//*[@id="app"]/main/nav/ul/li[3]/a""")
+#Локаторы для ДЗ 3
     LOCATOR_CONTACT = (By.XPATH, """//*[@id="app"]/main/nav/ul/li[2]/a""")
     LOCATOR_YOUR_NAME_CONTACT = (By.XPATH, """//*[@id="contact"]/div[1]/label/input""")
     LOCATOR_YOUR_EMAIL_CONTACT = (By.XPATH, """//*[@id="contact"]/div[2]/label/input""")
     LOCATOR_CONTENT_CONTACT = (By.XPATH, """//*[@id="contact"]/div[3]/label/span/textarea""")
     LOCATOR_CONTACT_BTN = (By.XPATH, """//*[@id="contact"]/div[4]/button""")
+
+
 
 class OperationsHelper(BasePage):
 
@@ -84,11 +86,9 @@ class OperationsHelper(BasePage):
         self.find_element(TestSearchLocators.LOCATOR_SAVE_BTN).click()
 
     def get_new_title_text(self):
-        element = WebDriverWait(self.driver, 10).until(
-            EC.visibility_of_element_located(TestSearchLocators.LOCATOR_SEARCH_TITLE_FIELD)
-        )
-        text = element.text
-        logging.info(f"We find text {text} in field {TestSearchLocators.LOCATOR_SEARCH_TITLE_FIELD[1]}")
+        title_field = self.find_element(TestSearchLocators.LOCATOR_SEARCH_TITLE_FIELD, time=2)
+        text = title_field.text
+        logging.info(f"We find text {text} in error field {TestSearchLocators.LOCATOR_SEARCH_TITLE_FIELD[1]}")
         return text
 
     def click_create_contact(self):
@@ -118,9 +118,8 @@ class OperationsHelper(BasePage):
         self.find_element(TestSearchLocators.LOCATOR_CONTACT_BTN).click()
 
     def get_alert_text(self):
-        WebDriverWait(self.driver, 10).until(EC.alert_is_present())
-        alert = self.driver.switch_to.alert
-        text = alert.text
+        alert_field = self.driver.switch_to.alert
+        text = alert_field.text
         logging.info(f"We find text {text} in alert")
-        alert.accept()
         return text
+
