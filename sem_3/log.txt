@@ -1,0 +1,51 @@
+2025-07-14 08:09:50 INFO ====== WebDriver manager ======
+2025-07-14 08:09:51 INFO Get LATEST geckodriver version for 140.0 firefox
+2025-07-14 08:09:52 INFO Get LATEST geckodriver version for 140.0 firefox
+2025-07-14 08:09:52 INFO Get LATEST geckodriver version for 140.0 firefox
+2025-07-14 08:09:52 INFO Getting latest mozilla release info for v0.36.0
+2025-07-14 08:09:53 INFO About to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-win64.zip
+2025-07-14 08:09:54 INFO Driver downloading response is 200
+2025-07-14 08:09:54 INFO Get LATEST geckodriver version for 140.0 firefox
+2025-07-14 08:09:54 INFO Driver has been saved in cache [C:\Users\mig\.wdm\drivers\geckodriver\win64\v0.36.0]
+2025-07-14 08:10:00 INFO Test 1 Starting
+2025-07-14 08:10:02 INFO Send test to element //*[@id="login"]/div[1]/label/input
+2025-07-14 08:10:02 INFO Send PASSWORD to element //*[@id="login"]/div[2]/label/input
+2025-07-14 08:10:02 INFO Click login button
+2025-07-14 08:10:04 INFO We find text 401 in error field //*[@id="app"]/main/div/div/div[2]/h2
+2025-07-14 08:10:06 INFO ====== WebDriver manager ======
+2025-07-14 08:10:08 INFO Get LATEST geckodriver version for 140.0 firefox
+2025-07-14 08:10:08 INFO Get LATEST geckodriver version for 140.0 firefox
+2025-07-14 08:10:08 INFO Driver [C:\Users\mig\.wdm\drivers\geckodriver\win64\v0.36.0\geckodriver.exe] found in cache
+2025-07-14 08:10:13 INFO Test 2 Starting
+2025-07-14 08:10:15 INFO Send API Testing to element //*[@id="login"]/div[1]/label/input
+2025-07-14 08:10:15 INFO Send 19491bd3ab to element //*[@id="login"]/div[2]/label/input
+2025-07-14 08:10:15 INFO Click login button
+2025-07-14 08:10:16 INFO We find text Hello, API Testing in error field ('xpath', '//*[@id="app"]/main/nav/ul/li[3]/a')
+2025-07-14 08:10:19 INFO ====== WebDriver manager ======
+2025-07-14 08:10:20 INFO Get LATEST geckodriver version for 140.0 firefox
+2025-07-14 08:10:21 INFO Get LATEST geckodriver version for 140.0 firefox
+2025-07-14 08:10:21 INFO Driver [C:\Users\mig\.wdm\drivers\geckodriver\win64\v0.36.0\geckodriver.exe] found in cache
+2025-07-14 08:10:26 INFO Test 3 Starting
+2025-07-14 08:10:36 INFO Send API Testing to element //*[@id="login"]/div[1]/label/input
+2025-07-14 08:10:36 INFO Send 19491bd3ab to element //*[@id="login"]/div[2]/label/input
+2025-07-14 08:10:36 INFO Click login button
+2025-07-14 08:10:36 INFO Click create post button
+2025-07-14 08:10:42 INFO Send Test 3 to element //*[@id='create-item']/div/div/div[1]/div/label/input
+2025-07-14 08:10:43 INFO Send Test  3 to element //*[@id='create-item']/div/div/div[2]/div/label/span/textarea
+2025-07-14 08:10:43 INFO Send Test 3. to element //*[@id='create-item']/div/div/div[3]/div/label/span/textarea
+2025-07-14 08:10:44 INFO Click save post button
+2025-07-14 08:10:45 INFO We find text Test 3 in field //*[@id='app']/main/div/div[1]/h1
+2025-07-14 08:10:49 INFO ====== WebDriver manager ======
+2025-07-14 08:10:50 INFO Get LATEST geckodriver version for 140.0 firefox
+2025-07-14 08:10:50 INFO Get LATEST geckodriver version for 140.0 firefox
+2025-07-14 08:10:51 INFO Driver [C:\Users\mig\.wdm\drivers\geckodriver\win64\v0.36.0\geckodriver.exe] found in cache
+2025-07-14 08:10:59 INFO Test 4 Starting
+2025-07-14 08:11:04 INFO Send API Testing to element //*[@id="login"]/div[1]/label/input
+2025-07-14 08:11:05 INFO Send 19491bd3ab to element //*[@id="login"]/div[2]/label/input
+2025-07-14 08:11:05 INFO Click login button
+2025-07-14 08:11:05 INFO Click create contact
+2025-07-14 08:11:07 INFO Send Ivan to element //*[@id="contact"]/div[1]/label/input
+2025-07-14 08:11:07 INFO Send ivan@gmail.com to element //*[@id="contact"]/div[2]/label/input
+2025-07-14 08:11:07 INFO Send Text to send contact to element //*[@id="contact"]/div[3]/label/span/textarea
+2025-07-14 08:11:07 INFO Click submit contact
+2025-07-14 08:11:08 INFO We find text Form successfully submitted in alert

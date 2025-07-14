@@ -1,0 +1,9 @@
+browser: firefox #chrome
+username: API Testing
+password: 19491bd3ab
+post_title: "Test 3"
+post_description: "Test  3"
+post_content: "Test 3."
+your_name: "Ivan"
+your_email: "ivan@gmail.com"
+your_content: "Text to send contact"
