@@ -14,7 +14,7 @@ your_name = testdata.get("your_name")
 your_email = testdata.get("your_email")
 your_content = testdata.get("your_content")
 
-def test_step1(browser):
+def test_failed_login(browser):
     logging.info("Test 1 Starting")
     testpage = OperationsHelper(browser)
     testpage.go_to_site()
@@ -23,7 +23,7 @@ def test_step1(browser):
     testpage.click_login_button()
     assert testpage.get_error_text() == "401"
 
-def test_step2(browser):
+def test_successful_login(browser):
     logging.info("Test 2 Starting")
     testpage = OperationsHelper(browser)
     testpage.enter_login(name)
@@ -31,7 +31,7 @@ def test_step2(browser):
     testpage.click_login_button()
     assert testpage.get_user_text() == f"Hello, {name}"
 
-def test_step3(browser):
+def test_creating_new_post(browser):
     logging.info("Test 3 Starting")
     testpage = OperationsHelper(browser)
     testpage.click_create_post_button()
@@ -42,7 +42,7 @@ def test_step3(browser):
     time.sleep(2)
     assert testpage.get_new_title_text() == post_title
 
-def test_step4(browser):
+def test_sending_contact_form(browser):
     logging.info("Test 4 Starting")
     testpage = OperationsHelper(browser)
     testpage.click_create_contact()

@@ -4,9 +4,9 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 
-fromaddr = "ivan@gmail.com"
-toaddr = "ivan@list.ru"
-mypass = "1111111111"
+fromaddr = "mig@gmail.com"
+toaddr = "ivan5@mail.ru"
+mypass = "11111111111"
 reportname = "report.html"
 
 msg = MIMEMultipart()
